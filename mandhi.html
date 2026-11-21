@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Surprise ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #e6d5ff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 40px 25px;
+    border-radius: 25px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+}
+
+h1 {
+    color: #e75480;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #ffc0d9;
+    border-radius: 12px;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+button {
+    background: #e75480;
+    color: white;
+    border: none;
+    padding: 13px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #d6336c;
+}
+
+#message {
+    margin-top: 15px;
+    color: #e75480;
+    font-weight: bold;
+}
+
+#secondPage {
+    display: none;
+}
+
+.heart {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container" id="firstPage">
+
+    <div class="heart">❤️</div>
+
+    <h1>One Question!</h1>
+
+    <p>What's my favorite food?</p>
+
+    <input
+        type="text"
+        id="answer"
+        placeholder="Enter your answer..."
+    >
+
+    <button onclick="checkAnswer()">Submit ❤️</button>
+
+    <div id="message"></div>
+
+</div>
+
+
+<div class="container" id="secondPage">
+
+    <div class="heart">🥺❤️</div>
+
+    <h1>I'm Sorry!</h1>
+
+    <p>
+        Sorry, I didn't mean to get angry with you.
+        I never wanted to hurt you.
+        Sometimes I get angry without realizing it.
+        Please don't take it to heart.
+        You are special to me. ❤️
+    </p>
+
+    <h2 style="color:#e75480;">Please forgive me! 🫶</h2>
+
+</div>
+
+
+<script>
+
+function checkAnswer() {
+
+    let answer = document
+        .getElementById("answer")
+        .value.trim().toLowerCase();
+
+    if (answer === "mandhi" || answer === "mandy") {
+
+        document.getElementById("firstPage").style.display = "none";
+
+        document.getElementById("secondPage").style.display = "block";
+
+    } else {
+
+        document.getElementById("message").innerText =
+            "Oops! Wrong answer. Try again ❤️";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
